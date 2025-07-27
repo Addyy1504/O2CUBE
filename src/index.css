@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dots styled compact and inside image */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: black; /* arrow icon */
+  background: black; /* circle background */
+  padding: 6px 10px;
+  border-radius: 999px; /* full circle */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-arrow::before {
+  content: '›'; /* Right arrow */
+  color: white; /* arrow color inside black circle */
+}
+
+.custom-arrow.left::before {
+  content: '‹'; /* Left arrow */
+}
+
+.custom-arrow.right {
+  right: 8px;
+}
+
+.custom-arrow.left {
+  left: 8px;
+}
+
+body {
+  @apply overflow-x-hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
